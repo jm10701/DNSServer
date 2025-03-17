@@ -43,7 +43,7 @@ def decrypt_with_aes(encrypted_data, password, salt):
     decrypted_data = f.decrypt(encrypted_data) #call the Fernet decrypt method
     return decrypted_data.decode('utf-8')
 
-salt = "Tandon".encode('utf-8') # Remember it should be a byte-object
+salt = 'Tandon'.encode('utf-8') # Remember it should be a byte-object
 password = "jm10701@nyu.edu"
 input_string = "AlwaysWatching"
 
@@ -92,7 +92,7 @@ dns_records = {
         dns.rdatatype.AAAA: '2001:0db8:85a3:0000:0000:8a2e:0373:7312',
         dns.rdatatype.MX: [(10, 'mxa-00256a01.gslb.pphosted.com.')],  # List of (preference, mail server) tuples
         dns.rdatatype.NS: 'ns1.nyu.edu.',
-        dns.rdatatype.TXT: (encrypted_value.decode("utf-8"))
+        dns.rdatatype.TXT: (encrypted_value.decode("utf-8"),)
     }
     # Add more records as needed (see assignment instructions!
 }
